@@ -1,0 +1,114 @@
+\documentclass{beamer}
+\mode<presentation>{
+  \usetheme{Madrid} 
+}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+
+\title{Ruby on Rails training}
+\author{Wojtek Sykurski}
+\institute[Samsung R\&D]
+{
+  Samsung R\&D Poland \\
+  \medskip
+  \textit{w.sykurski@samsung.com}
+}
+\date{\today}
+
+\begin{document}
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+\begin{frame}
+  \frametitle{Agenda}
+  \tableofcontents[hideallsubsections]
+\end{frame}
+
+\section{First Day: Introduction \& (mostly) Static Content}
+\begin{frame}
+  \frametitle{Day First Agenda:}
+  \tableofcontents
+  [
+  currentsection,
+  currentsubsection,
+  subsectionstyle=show/shaded/hide
+  ]
+\end{frame}
+
+\subsection{Web Applications Frameworks}
+
+\begin{frame}
+  \frametitle{Technologies}
+  \begin{itemize}
+    \item M\$ Technologies
+    \item Rest of the World
+  \end{itemize}
+  
+\end{frame}
+
+\subsection{Technologies}
+
+\subsubsection{Most popular}
+
+\begin{frame}
+  \frametitle{Technologies - Rest of the world}
+  \begin{itemize}
+    \item Pure HTML
+    \item PHP
+    \item Python based Frameworks
+      \begin{itemize}
+        \item Django
+        \item web2py
+        \item TurboGears
+        \item Others
+      \end{itemize}
+    \item Ruby based Frameworks
+      \begin{itemize}
+        \item Ruby on Rails
+        \item Sinatra
+        \item Cuba, Merb and many others
+      \end{itemize}
+  \end{itemize}
+  
+\end{frame}
+
+
+\subsubsection{Ruby on Rails}
+
+\begin{frame}
+  \frametitle{Ruby on Rails}
+  \begin{itemize}
+    \item Fully operational Web Framework:
+      \begin{itemize}
+        \item Build in WebServer(Webrick)
+        \item Database Engine (SQLight)
+        \item Debuging and Tracking tools
+        \item Support for plugins:
+          \begin{itemize}
+            \item Made ``by hand''
+            \item Ruby Gems 
+          \end{itemize}
+
+      \end{itemize}
+    \item Use MCV model
+      \begin{itemize}
+        \item Model - Database communication
+        \item View - User Front-end
+        \item Controller - Integration and synchronization between Model and View
+      \end{itemize}
+    \item Integration with most of popular Web servers and Databases
+
+  \end{itemize}
+  
+\end{frame}
+
+\section{Second Day: User Scaffold}
+
+\section{Third Day}
+
+\section{Fourth Day}
+
+\section{Five Day}
+  
+\end{document}
