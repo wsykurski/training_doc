@@ -1,6 +1,0 @@
-\beamer@endinputifotherversion {3.24pt}
-\beamer@sectionintoc {1}{First Day: Introduction \& (mostly) Static Content}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{Web Applications Frameworks}{4}{0}{1}
-\beamer@subsectionintoc {1}{2}{Technologies}{5}{0}{1}
-\beamer@subsubsectionintoc {1}{2}{1}{Most popular}{5}{0}{1}
-\beamer@subsubsectionintoc {1}{2}{2}{Ruby on Rails}{6}{0}{1}
