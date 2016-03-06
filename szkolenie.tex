@@ -2,8 +2,22 @@
 \mode<presentation>{
   \usetheme{Madrid} 
 }
+\usepackage{pstricks}
+\usepackage{listings}
 \usepackage{graphicx} % Allows including images
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{color}
+
+\makeatletter
+\def\th@mystyle{%
+    \normalfont % body font
+    \setbeamercolor{block title example}{bg=orange,fg=white}
+    \setbeamercolor{block body example}{bg=orange!20,fg=black}
+    \def\inserttheoremblockenv{exampleblock}
+  }
+\makeatother
+\theoremstyle{mystyle}
+\newtheorem*{attention}{Attention !!!}
 
 \title{Ruby on Rails training}
 \author{Wojtek Sykurski}
@@ -16,6 +30,7 @@
 \date{\today}
 
 \begin{document}
+\input{source_cods}
 \begin{frame}
   \titlepage 
 \end{frame}
@@ -49,61 +64,62 @@
 
 \subsection{Technologies}
 
-\subsubsection{Most popular}
+    \subsubsection{Most popular}
 
-\begin{frame}
-  \frametitle{Technologies - Rest of the world}
-  \begin{itemize}
-    \item Pure HTML
-    \item PHP
-    \item Python based Frameworks
+    \begin{frame}
+      \frametitle{Technologies - Rest of the world}
       \begin{itemize}
-        \item Django
-        \item web2py
-        \item TurboGears
-        \item Others
-      \end{itemize}
-    \item Ruby based Frameworks
-      \begin{itemize}
-        \item Ruby on Rails
-        \item Sinatra
-        \item Cuba, Merb and many others
-      \end{itemize}
-  \end{itemize}
-  
-\end{frame}
-
-
-\subsubsection{Ruby on Rails}
-
-\begin{frame}
-  \frametitle{Ruby on Rails}
-  \begin{itemize}
-    \item Fully operational Web Framework:
-      \begin{itemize}
-        \item Build in WebServer(Webrick)
-        \item Database Engine (SQLight)
-        \item Debuging and Tracking tools
-        \item Support for plugins:
+        \item Pure HTML
+        \item Java - different technologies
+        \item PHP
+        \item Python based Frameworks
           \begin{itemize}
-            \item Made ``by hand''
-            \item Ruby Gems 
+            \item Django
+            \item web2py
+            \item TurboGears
+            \item Others
           \end{itemize}
-
+        \item Ruby based Frameworks
+          \begin{itemize}
+            \item Ruby on Rails
+            \item Sinatra
+            \item Cuba, Merb and many others
+          \end{itemize}
       \end{itemize}
-    \item Use MCV model
+
+    \end{frame}
+
+
+    \subsubsection{Ruby on Rails}
+
+    \begin{frame}
+      \frametitle{Technologies - Ruby on Rails}
       \begin{itemize}
-        \item Model - Database communication
-        \item View - User Front-end
-        \item Controller - Integration and synchronization between Model and View
+        \item Fully operational Web Framework:
+          \begin{itemize}
+            \item Build in WebServer(Webrick)
+            \item Database Engine (SQLight)
+            \item Debuging and Tracking tools
+            \item Support for plugins:
+              \begin{itemize}
+                \item Made ``by hand''
+                \item Ruby Gems 
+              \end{itemize}
+
+          \end{itemize}
+        \item Use MCV model
+          \begin{itemize}
+            \item Model - Database communication
+            \item View - User Front-end
+            \item Controller - Integration and synchronization between Model and View
+          \end{itemize}
+        \item Integration with most of popular Web servers and Databases
+
       \end{itemize}
-    \item Integration with most of popular Web servers and Databases
 
-  \end{itemize}
-  
-\end{frame}
+    \end{frame}
 
-\subsubsection{Ruby}
+\subsection{Ruby}
 \begin{frame}
   \frametitle{Ruby}
   \begin{itemize}
@@ -131,17 +147,19 @@
   \end{itemize}
 \end{frame}
 
-
 \begin{frame}
   \frametitle{Ruby - variables}
+    \begin{definition}
+      Global Variables - sporadic use in Ruby on Rails:
+    \end{definition}
+    \begin{example}
+      $ \$Global\_Var=10$
+    \end{example}
   \begin{itemize}
-    \item Global Variables - sporadic use in Ruby on Rails:
-      \begin{itemize}
-        \item $ \$Global\_Var=10$
-      \end{itemize}
     \item Instance Variables - very often used in Ruby on Rails:
       \begin{itemize}
         \item $ @Instance\_Var=10$
+        \item RoR usage - transfer data between controller, model and view
       \end{itemize}
     \item Class Variables - in practice - never used in RoR:
       \begin{itemize}
@@ -152,6 +170,240 @@
         \item $ Local\_Var=10$
       \end{itemize}
     \end{itemize}
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ruby - operators}
+  \begin{itemize}
+    \item Add, Sub, Multiply, Divide, Power
+      \begin{itemize}
+        \item numbers
+        \item $var1=3*3$
+        \item $var1**3$
+        \item string, some other classes
+        \item $var2 = 'jakis tekst '$
+        \item $var2 * 3$
+      \end{itemize}
+    \item Assign value
+      \begin{itemize}
+        \item Standard operators
+        \item Ruby special
+      \end{itemize}
+  \end{itemize}
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ruby - classes}
+  \begin{definition}[Class]
+    Class is a template for custom objects creation. Those objects contains
+    member variables and functions (methods)
+  \end{definition}
+  \classexample
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ruby - classes - attribute accessor}
+  \begin{definition}[Attribute Accessor]
+    Attribute accessor provide easy access to instance variables
+  \end{definition}
+  \classexampleII
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ruby - classes - private/protected}
+  \begin{definition}[Private methods]
+    Private methods - can only be used by other methods of the same object.
+    \textcolor{red}{AND OBJECT OF CLASSES that inherit from this class !!!}
+  \end{definition}
+
+  \classexampleprivateI
+
+\end{frame}
+
+  
+
+\begin{frame}
+  \frametitle{Ruby - classes - private/protected}
+  \begin{definition}[Private methods]
+    Private methods - different annotation.
+  \end{definition}
+
+  \classexampleprivateII
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ruby - classes - protected}
+  \begin{definition}[Protected]
+    Protected works almost the same way as private!\\*
+    \textcolor{red}{Only difference is that protected methods can be used by other objects of the same class}
+  \end{definition}
+  
+  \classexampleprotected
+\end{frame}
+
+\subsection{Ruby on Rails}
+
+\begin{frame}
+  \frametitle{Ruby on Rails - structure}
+  Main components of RoR application:
+  \begin{itemize}
+  \item MCV model
+  \item Configuration
+    \begin{itemize}
+      \item Environments
+      \item Database
+      \item Gemfile
+      \item Routes
+    \end{itemize}
+  \item Utils
+    \begin{itemize}
+      \item Routes
+      \item Rake
+      \item Bundler
+    \end{itemize}
+  \end{itemize}
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ruby on Rails - fast start}
+  \newappGI
+  \newappGII
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ruby on Rails - MCV }
+  \begin{definition}
+    MCV (Model, Controller, View) is a software architecture used in RoR.
+    It separates database operations (Model), content generation (View)
+    and application logic (Controller) in to different components.
+  \end{definition}
+  \begin{figure}[h]
+   \centering
+      \includegraphics[width = 0.7\textwidth]{./mcv1.eps}
+  \end{figure}
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ruby on Rails - Model}
+  \begin{definition}
+    Model - describes database object (usual table), relations with other
+    models and validations of data.
+  \end{definition}
+  \begin{example}[user.rb]
+    \modelexample
+  \end{example}
+  \begin{attention}
+    \alert{Models DO NOT} describe table structure, column names, data types and so.
+  \end{attention}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ruby on Rails - View}
+  How does Rails generate page:
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      Main elements:
+      \begin{itemize}
+        \item Layout
+        \item View
+        \item Partial 
+      \end{itemize}
+      Other:
+      \begin{itemize}
+        \item Helpers 
+        \item Assets 
+          \begin{itemize}
+            \item js, coffee scrpits
+            \item css
+            \item images, video, music, etc.
+          \end{itemize}
+      \end{itemize}
+    \end{column}
+    
+    \begin{column}{0.5\textwidth}
+      \begin{figure}[h]
+        \centering 
+        \includegraphics[width = 0.7\textwidth]{./Layout_view_partial.eps}
+      \end{figure}
+    \end{column}
+  \end{columns}
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ruby on Rails - View}
+  \begin{definition}
+    View contains the html web page structure, with additional RoR logic
+  \end{definition}
+  \begin{example}[user.html.erb]
+    \viewexample
+  \end{example}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ruby on Rails - View Layout}
+  \begin{definition}
+    Layout contain general structure of page. 
+    Views are generated ``inside'' application layout file
+  \end{definition}
+  \begin{example}[user.html.erb]
+    \viewexample
+  \end{example}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ruby on Rails - Environments}
+  \begin{definition}
+      Environments - describes server run time environment, can be used for other
+      configuration files.
+  \end{definition}
+  Files:
+  \begin{itemize}
+  \item All files in ./config/environments
+  \item ./config/environments.rb
+  \end{itemize}
+  \begin{example}
+    \begin{itemize}
+    \item Development - will be used during this course
+    \item Production - will be used during this course
+    \item Test - will be used during this course
+    \end{itemize}
+  \end{example}
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ruby on Rails - create WebApp}
+  
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Ruby on Rails - directory structure}
+  
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Ruby on Rails - Rails environments}
+  
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Ruby on Rails - Gem file}
+  
+\end{frame}
+
+\subsubsection{MCV}
+\begin{frame}
+  \frametitle{Ruby on Rails - MCV}
   
 \end{frame}
 

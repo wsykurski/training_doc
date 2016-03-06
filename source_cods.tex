@@ -1,0 +1,167 @@
+\defverbatim[colored]\newappGI{
+  \begin{lstlisting}[language=bash,basicstyle=\ttfamily,
+    keywordstyle=\color{red}]
+   mkdir Rails_Group_1 
+   cd Rails_Group_1
+   rails new helldesk
+   rails server
+  \end{lstlisting}
+}
+
+\defverbatim[colored]\newappGII{
+  \begin{lstlisting}[language=bash,basicstyle=\ttfamily,
+    keywordstyle=\color{red}]
+   mkdir Rails_Group_2 
+   cd Rails_Group_2
+   rails new helldesk
+   rails server
+  \end{lstlisting}
+}
+
+\defverbatim[colored]\modelexample{
+  \begin{lstlisting}[language=ruby,basicstyle=\ttfamily,
+    keywordstyle=\color{red}]
+    class User < ActiveRecord::Base
+      validates :name, :presence => true,
+                :uniqueness => true
+      validates :password, :confirmation => true
+      ...
+    end
+\end{lstlisting}
+}
+
+\defverbatim[colored]\viewexample{
+  \begin{lstlisting}[language=ruby,basicstyle=\tiny,
+    keywordstyle=\color{red}]
+<% provide(:title, 'Index') %>
+<h1>Listing Users</h1>
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+<table>
+<tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <div class="actions">
+            <td><%= link_to 'Show', user %></td>
+            <td><%= link_to 'Edit', edit_user_path(user) %></td>
+            <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </div>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= link_to 'New User', new_user_path %>
+\end{lstlisting}
+}
+
+\defverbatim[colored]\classexample{
+  \begin{lstlisting}[language=ruby,basicstyle=\tiny,
+    keywordstyle=\color{red}]
+    class TestClass
+       def initialize
+         @instance_var=10
+       end
+
+       def method
+         put 'I am test class'
+       end
+
+       def instance_var
+         return @instance_var
+       end
+
+       def instance_var=(var)
+         @instance_var = var
+       end
+    end
+\end{lstlisting}
+}
+
+
+\defverbatim[colored]\classexampleII{
+  \begin{lstlisting}[language=ruby,basicstyle=\small,
+    keywordstyle=\color{red}]
+    class TestClass
+       attr_accessor :instance_var
+       def initialize
+         @instance_var=10
+       end
+
+       def method
+         put 'I am test class'
+       end
+
+    end
+\end{lstlisting}
+}
+
+\defverbatim[colored]\classexampleprivateI{
+  \begin{lstlisting}[language=ruby,basicstyle=\tiny,
+    keywordstyle=\color{red}]
+    class TestClass
+       attr_accessor :instance_var
+       def initialize
+         @instance_var=10
+         method
+       end
+       
+       private:
+
+       def method
+         put 'I am test class'
+       end
+
+    end
+\end{lstlisting}
+}
+
+\defverbatim[colored]\classexampleprivateII{
+  \begin{lstlisting}[language=ruby,basicstyle=\tiny,
+    keywordstyle=\color{red}]
+    class TestClass
+       attr_accessor :instance_var
+       def initialize
+         @instance_var=10
+         method
+       end
+
+       def method1
+         put 'I am test class'
+       end
+       
+       def method2
+         put 'I am test class'
+       end
+
+       private :method, :method2
+
+    end
+\end{lstlisting}
+}
+
+\defverbatim[colored]\classexampleprotected{
+  \begin{lstlisting}[language=ruby,basicstyle=\tiny,
+    keywordstyle=\color{red}]
+    class TestClass
+       attr_accessor :instance_var
+       def initialize
+         @instance_var=10
+         method
+       end
+
+       protected:
+
+       def method1
+         put 'I am test class'
+       end
+       
+       def method2
+         put 'I am test class'
+       end
+    end
+\end{lstlisting}
+}
