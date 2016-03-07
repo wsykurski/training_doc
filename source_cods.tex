@@ -177,3 +177,45 @@
     end
 \end{lstlisting}
 }
+
+\defverbatim[colored]\railsgenerator{
+  \begin{lstlisting}[language=bash,basicstyle=\tiny,
+    keywordstyle=\color{red}]
+    rails generate controller static_content start about help
+\end{lstlisting}
+}
+
+\defverbatim[colored]\railschangeroute{
+  \begin{lstlisting}[language=bash,basicstyle=\small,
+    keywordstyle=\color{red}]
+    root 'static_content#start'
+\end{lstlisting}
+}
+
+\defverbatim[colored]\railstopmenu{
+  \begin{lstlisting}[language=ruby,basicstyle=\tiny,
+    keywordstyle=\color{red}]
+    <div id="left_menu">
+        <ul>
+            <li> <%= link_to "Issues", "#" %> </li>
+            <li> <%= link_to "Admin", "#" %> </li>
+        </ul> 
+    </div>
+
+    <div>
+        <ul>
+            <li> <%= link_to "Login", "#" %></li>
+            <li> <%= link_to "About", "#" %></li>
+            <li> <%= link_to "Help", "#" %></li>
+        </ul>
+    </div>
+\end{lstlisting}
+}
+
+
+\defverbatim[colored]\railspartial{
+  \begin{lstlisting}[language=ruby,basicstyle=\small,
+    keywordstyle=\color{red}]
+    <%= redren 'layouts/top_menu" %>
+\end{lstlisting}
+}

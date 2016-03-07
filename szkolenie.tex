@@ -339,6 +339,16 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{Ruby on Rails - controller}
+  \begin{definition}
+    Controller is responsible for application logic by providing connection
+    between models, views, libraries and gems.
+    It handles and generates requests from web server.
+  \end{definition}
+  
+\end{frame}
+
+\begin{frame}
   \frametitle{Ruby on Rails - View}
   How does Rails generate page:
   \begin{columns}
@@ -383,7 +393,7 @@
 
 \begin{frame}
   \frametitle{Ruby on Rails - View Layout}
-  \begin{definition}
+  \begin{definition}{Layout}
     Layout contain general structure of page. 
     Views are generated ``inside'' application layout file
   \end{definition}
@@ -394,7 +404,7 @@
 
 \begin{frame}
   \frametitle{Ruby on Rails - Environments}
-  \begin{definition}
+  \begin{definition}{RoR Environments}
       Environments - describes server run time environment, can be used for other
       configuration files.
   \end{definition}
@@ -414,10 +424,104 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Ruby on Rails - create WebApp}
+  \frametitle{Ruby on Rails - Create basic content}
+  \begin{definition}
+    Rails generator - tool for controllers, views, models and helpers automatic creation
+  \end{definition}
+  For now, lets just put this in terminal:
+  \railsgenerator
+  And go to:\\*
+  \textcolor{red}{http://localhost:3000/static\_content/start}
+  \textcolor{red}{http://localhost:3000/static\_content/about}
+  \textcolor{red}{http://localhost:3000/static\_content/help}
   
 \end{frame}
 
+\begin{frame}
+  \frametitle{Ruby on Rails - Change page root}
+  \begin{definition}
+    Rails routes describes how to redirect html requests to specific controller/view
+    File location: ./config/routes.rb
+  \end{definition}
+  To change Web app root to specific controller and view, add following to this file:
+  \railschangeroute
+\end{frame}
+
+\subsection{Layouts}
+\begin{frame}
+  \frametitle{Customizing layout }
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      What we want to achieve:
+      \begin{figure}[h]
+      \centering
+       \includegraphics[width = 0.7\textwidth]{./page_layout.eps}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+
+          Required Steps:
+          \begin{itemize}
+          \item Add top menu:
+            \begin{itemize}
+            \item List of links
+            \item Custom CSS with positioning
+            \end{itemize}
+          \item Display top menu on all pages
+            \begin{itemize}
+              \item Needs to be added to Layout
+              \item Use of ``Partials''
+            \end{itemize}
+          \item Dynamic Pages Title generation
+            \begin{itemize}
+              \item Provide title for every subpage
+              \item Error handling if subpage has none
+              \item Create custom functions for handling all those conditions
+              \item Place theme in helper
+            \end{itemize}
+
+          \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Layouts - Creating top menu}
+  Add folowing code to ./app/views/layouts/application.html.erb in ``Body''
+  section:
+  \railstopmenu
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Layouts - Customizing CSS}
+  \begin{itemize}
+    \item Display links in line 
+    \item Left and Right menu
+    \item Place menu on top
+    \item Add some CSS3 effects - useful link: http://www.css3maker.com/
+  \end{itemize}
+  
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Layouts - Move top menu to Partial}
+  \begin{definition}
+    Partial is fragment of HTML code which can be included in other Web Pages.
+    It is very useful for generating lists, tables (for ex. table of products)
+    and navigation menus 
+  \end{definition}
+  In this case, We want to move source code from application layout to partial,
+  to make it more clean and readable.
+  Required steps:
+  \begin{itemize}
+    \item Create new file ./app/views/layouts/\_top\_menu.html.erb
+    \item Copy all top menu div to that file
+    \item In application layout add \railspartial
+  \end{itemize}
+
+\end{frame}
 
 \begin{frame}
   \frametitle{Ruby on Rails - directory structure}
