@@ -19,5 +19,9 @@ CLOSED: [2016-03-06 nie 19:55] DEADLINE: <2016-03-06 nie 18:00>
 CLOSED: [2016-03-06 nie 19:55] DEADLINE: <2016-03-06 nie 20:00>
 ***** DONE CSS
 CLOSED: [2016-03-06 nie 19:56] DEADLINE: <2016-03-06 nie 21:00>
-
+*** Dynamic title generation
+***** DONE From view and layout 
+CLOSED: [2016-03-07 pon 20:44] DEADLINE: <2016-03-07 pon 23:00>
+***** DONE By Hellper 
+CLOSED: [2016-03-07 pon 20:44] DEADLINE: <2016-03-07 pon 23:00>
 ** Dzień IIgi

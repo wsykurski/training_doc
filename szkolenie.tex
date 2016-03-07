@@ -504,7 +504,6 @@
   
 \end{frame}
 
-
 \begin{frame}
   \frametitle{Layouts - Move top menu to Partial}
   \begin{definition}
@@ -524,26 +523,27 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Ruby on Rails - directory structure}
-  
-\end{frame}
-
-
-\begin{frame}
-  \frametitle{Ruby on Rails - Rails environments}
-  
-\end{frame}
-
-
-\begin{frame}
-  \frametitle{Ruby on Rails - Gem file}
-  
+  \frametitle{Page Title - dynamic generated}
+  \begin{definition}
+    To send some variable from View to Layout use the ``provide'' build in function. 
+  \end{definition}
+  \railsprovide
+  To handle it in layout, following code can be used:
+  \railslayouthandletitle
 \end{frame}
 
 \begin{frame}
-  \frametitle{Ruby on Rails - MCV}
-  
+  \frametitle{Dynamic Title: Use Helper}
+  \begin{definition}
+    Helpers all special files, which behave like libraries - they store
+    functions (helpers), which can be then use in views and layouts, 
+    \textcolor{red}{but Not in Controllers and Models !!!}
+  \end{definition}
+  \railshelperI
+  To call it in application layout:
+  \railstitlehelperinlayout
 \end{frame}
+
 
 \section{Second Day: User Scaffold}
     \begin{frame}

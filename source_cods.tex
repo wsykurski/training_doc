@@ -219,3 +219,46 @@
     <%= redren 'layouts/top_menu" %>
 \end{lstlisting}
 }
+
+\defverbatim[colored]\railsprovide{
+  \begin{lstlisting}[language=ruby,basicstyle=\small,
+    keywordstyle=\color{red}]
+    <% provide(:title, 'Index') %> 
+\end{lstlisting}
+}
+
+\defverbatim[colored]\railslayouthandletitle{
+  \begin{lstlisting}[language=ruby,basicstyle=\small,
+    keywordstyle=\color{red}]
+    <% unless yield(:title).empty? %> 
+        <title>Helldesk2 | <%=yield(:title)%> </title> 
+    <%else %>
+        <title>Helldesk2</title> 
+    <% end %> 
+\end{lstlisting}
+}
+
+
+\defverbatim[colored]\railshelperI{
+  \begin{lstlisting}[language=ruby,basicstyle=\tiny,
+    keywordstyle=\color{red}]
+    def provide_title(subtitle='')
+     hell = "Helldesk"
+     if subtitle.empty?
+       hell
+     else
+       hell + " | " + subtitle
+    end
+  end
+
+\end{lstlisting}
+}
+
+
+\defverbatim[colored]\railstitlehelperinlayout{
+  \begin{lstlisting}[language=ruby,basicstyle=\small,
+    keywordstyle=\color{red}]
+    <title><%=provide_title(yield(:title))%></title>
+
+\end{lstlisting}
+}
