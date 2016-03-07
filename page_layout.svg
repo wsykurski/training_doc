@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:latexdraw="http://latexdraw.sourceforge.net/namespaces/latexdraw"
+    version="1.1" baseProfile="full">
+    <defs/>
+    <g>
+        <g latexdraw:type="rectangle" id="id84">
+            <rect x="10.0" y="69.0" width="270.0" height="375.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="#85e2e6"/>
+        </g>
+        <g latexdraw:type="rectangle" id="id85">
+            <rect x="9.0" y="71.0" width="269.0" height="98.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="#9c3e3e"/>
+        </g>
+        <g latexdraw:type="text" id="id86" font-family="Dialog"
+            fill="black" font-size="30" latexdraw:x="77.0">
+            <text x="77.0" y="116.0"><![CDATA[Top Menu]]></text>
+        </g>
+        <g latexdraw:type="drawing" id="id89">
+            <g latexdraw:type="rectangle" id="id90">
+                <rect x="10.0" y="132.0" width="113.0" height="37.0"
+                    latexdraw:borderPos="outer" stroke-width="2.0"
+                    stroke="black" fill="#e7a80a"/>
+            </g>
+            <g latexdraw:type="text" id="id91" font-family="Dialog"
+                fill="black" font-size="30" latexdraw:x="29.0">
+                <text x="29.0" y="161.0"><![CDATA[Links]]></text>
+            </g>
+        </g>
+        <g latexdraw:type="drawing" id="id95">
+            <g latexdraw:type="rectangle" id="id96">
+                <rect x="166.0" y="133.0" width="113.0" height="37.0"
+                    latexdraw:borderPos="outer" stroke-width="2.0"
+                    stroke="black" fill="#e7a80a"/>
+            </g>
+            <g latexdraw:type="text" id="id97" font-family="Dialog"
+                fill="black" font-size="30" latexdraw:x="185.0">
+                <text x="185.0" y="162.0"><![CDATA[Links]]></text>
+            </g>
+        </g>
+    </g>
+    <metadata>
+        <latexdraw:metadata>
+            <latexdraw:displayBorders>false</latexdraw:displayBorders>
+            <latexdraw:autoAdjust>true</latexdraw:autoAdjust>
+            <latexdraw:ppc>50</latexdraw:ppc>
+            <latexdraw:zoom>1.0</latexdraw:zoom>
+            <latexdraw:unit>cm</latexdraw:unit>
+            <latexdraw:classicGrid>false</latexdraw:classicGrid>
+            <latexdraw:gridGap>10</latexdraw:gridGap>
+            <latexdraw:code>0</latexdraw:code>
+            <latexdraw:displayGrid>true</latexdraw:displayGrid>
+            <latexdraw:magneticGrid>false</latexdraw:magneticGrid>
+            <latexdraw:autoUpdate>true</latexdraw:autoUpdate>
+            <latexdraw:version>2.0.8</latexdraw:version>
+            <latexdraw:size>
+                <latexdraw:width>1280</latexdraw:width>
+                <latexdraw:height>1025</latexdraw:height>
+            </latexdraw:size>
+            <latexdraw:position>
+                <latexdraw:x>0</latexdraw:x>
+                <latexdraw:y>-1</latexdraw:y>
+            </latexdraw:position>
+            <latexdraw:dividerPosition>0.75859375</latexdraw:dividerPosition>
+            <latexdraw:displayCodePanel>true</latexdraw:displayCodePanel>
+            <latexdraw:displayXScale>true</latexdraw:displayXScale>
+            <latexdraw:displayYScale>true</latexdraw:displayYScale>
+            <latexdraw:delimitorOpacity>130</latexdraw:delimitorOpacity>
+        </latexdraw:metadata>
+    </metadata>
+</svg>
