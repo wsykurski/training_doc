@@ -1,0 +1,23 @@
+* Szkolenie z RoR dla Samsunga
+* Cele
+* Materiały
+** Dzień Iszy
+Do zrobienia:
+*** DONE Ruby, irb 
+CLOSED: [2016-03-06 nie 16:20]
+*** DONE Rails - ogólny opis 
+CLOSED: [2016-03-06 nie 16:21]
+*** Static content:
+**** DONE Stworzenie controllera
+CLOSED: [2016-03-06 nie 16:22]
+**** DONE Zmiana root'a
+CLOSED: [2016-03-06 nie 16:22]
+**** Stworzenie Top Menu
+***** DONE Kod Html dla listy
+CLOSED: [2016-03-06 nie 19:55] DEADLINE: <2016-03-06 nie 18:00>
+***** DONE Partial
+CLOSED: [2016-03-06 nie 19:55] DEADLINE: <2016-03-06 nie 20:00>
+***** DONE CSS
+CLOSED: [2016-03-06 nie 19:56] DEADLINE: <2016-03-06 nie 21:00>
+
+** Dzień IIgi

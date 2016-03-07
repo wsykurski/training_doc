@@ -1,5 +1,7 @@
 *
 !*.tex
+.#*.*
 !*.eps
 !*.svg
+!*.org
 !.gitignore
