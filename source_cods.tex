@@ -254,11 +254,72 @@
 \end{lstlisting}
 }
 
+\defverbatim[colored]\routeupdateI{
+  \begin{lstlisting}[language=ruby,basicstyle=\tiny,
+    keywordstyle=\color{red}]
+    controller :static_content do
+       get 'start' => :start
+       get 'help' => :help
+       get 'about' => :about
+    end
+
+\end{lstlisting}
+}
+
+
 
 \defverbatim[colored]\railstitlehelperinlayout{
   \begin{lstlisting}[language=ruby,basicstyle=\small,
     keywordstyle=\color{red}]
     <title><%=provide_title(yield(:title))%></title>
+
+\end{lstlisting}
+}
+
+\defverbatim[colored]\generatorscaffold{
+  \begin{lstlisting}[language=bash,basicstyle=\tiny,
+    keywordstyle=\color{red}]
+    rails generate scaffold User name:string email:string hash_password:string salt:string
+\end{lstlisting}
+}
+
+\defverbatim[colored]\databasemigrationuser{
+  \begin{lstlisting}[language=bash,basicstyle=\small,
+    keywordstyle=\color{red}]
+    rake db:migrate
+\end{lstlisting}
+}
+
+\defverbatim[colored]\railsreallinksI{
+  \begin{lstlisting}[language=html,basicstyle=\tiny,
+    keywordstyle=\color{red}]
+    <div id="right_menu">
+        <ul>
+            <li> <%= link_to "Login", "#" %></li>
+            <li> <%= link_to "About", :about %></li>
+            <li> <%= link_to "Help", :help %></li>
+        </ul>
+    </div> 
+
+\end{lstlisting}
+}
+
+
+\defverbatim[colored]\migrationuser{
+  \begin{lstlisting}[language=ruby,basicstyle=\tiny,
+    keywordstyle=\color{red}]
+    class CreateUsers < ActiveRecord::Migration
+    def change
+     create_table :users do |t|
+       t.string :name
+       t.string :email
+       t.string :hash_password
+       t.string :salt
+
+       t.timestamps null: false
+      end
+     end
+    end  
 
 \end{lstlisting}
 }

@@ -556,9 +556,94 @@
       ]
     \end{frame}
 
-  \subsection{What we need for User ?}
     \begin{frame}
-      \frametitle{User requirements}
+      \frametitle{Rails routes - update}
+      We can make routes paths more user (developer) friendly, for further use.
+      Please add following to routes.rb file:
+      \routeupdateI
+      And then add some real links to out ``top menu''
+      \railsreallinksI
+    \end{frame}
+
+  \subsection{Users}
+    \begin{frame}
+      \frametitle{What we need for User ?}
+      \begin{itemize}
+      \item Login and logout
+        \begin{itemize}
+        \item Limit access for not logged persons
+        \end{itemize}
+      \item Store some information in database
+      \item Create Issues
+      \item Admin role:
+        \begin{itemize}
+        \item create new users
+        \item change existing Users data
+        \end{itemize}
+      \end{itemize}
+    \end{frame}
+    
+    \begin{frame}
+      \frametitle{Rails Generators}
+        There are several options for rails generators:
+        \begin{itemize}
+        \item scaffold
+        \item model
+        \item controller
+        \item asset
+        \item plugin
+        \item custom items - created by developer or obtained from gems
+        \end{itemize}
+        \begin{definition}
+          Scaffold generator include both model, controller and assets
+          generator.\\*
+          It also creates migrations files for DB tables creation.
+        \end{definition}
+        \generatorscaffold
+    \end{frame}
+
+    \begin{frame}
+      \frametitle{Rails migrations}
+      \begin{definition}[Rake]
+        Rake is tool to perform predefined tasks in Rails applications. Most
+        often it is used to perform database migrations.
+      \end{definition}
+      
+      \begin{definition}[Migrations]
+        Database migration is any action, which change DB table structure -
+        creates new ones, remove or modify existing. It can be also used to
+        perform data modifications (adding, removing or updating of rows), but
+        there are other tools for those tasks.\\*
+        Migrations are located in ./db/migrations folder.
+      \end{definition}
+      
+      \databasemigrationuser
+    \end{frame}
+    
+    \begin{frame}
+      \frametitle{Rails migration example}
+      \begin{example}
+        \migrationuser
+      \end{example}
+    \end{frame}
+    
+    \begin{frame}
+      \frametitle{User Model}
+      \begin{itemize}
+      \item How to encrypt password 
+        \begin{itemize}
+        \item Creating Simple Hash
+        \item Add some random stuff to it (``salt'')
+        \item Store it in DB
+        \end{itemize}
+      \item How to save password from formula
+      \item How to compare stored hash with password 
+      \end{itemize}
+    \end{frame}
+    
+    \begin{frame}
+      \frametitle{Rails Console}
+      Dokończyć to !!!
     \end{frame}
 
 \section{Third Day: Loging in Application}

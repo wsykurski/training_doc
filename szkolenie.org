@@ -1,6 +1,12 @@
 * Szkolenie z RoR dla Samsunga
 * Cele
 * Materiały
+** Dodatki:
+*** Git
+**** Clone całej apki
+**** No deep shit
+*** Atom Editor
+**** https://codeforgeek.com/2014/09/install-atom-editor-ubuntu-14-04/
 ** Dzień Iszy
 Do zrobienia:
 *** DONE Ruby, irb 
