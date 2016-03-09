@@ -643,7 +643,50 @@
     
     \begin{frame}
       \frametitle{Rails Console}
-      Dokończyć to !!!
+      \begin{definition}
+        Rails console is (in basic) IRB with loaded Rails Environment.
+      \end{definition}
+      To start it, please launch in main app folder:
+      \railsconsolestart
+      And lets import SHA2 libraries:
+      \railsimportsha
+      Encrypt example:
+      \railsconsoleencrypt
+    \end{frame}
+    
+    \begin{frame}
+      \frametitle{Tunning up User model}
+      Please add the following to User model:
+      \railsusermodelI 
+      \begin{definition}
+        Validations are rules and method if model object meets certain criteria.
+        Those parameters can be both predefined (like presence, length, matching
+        certain regex) or custom defined. In this second case we use \\*
+        \textcolor{red}{validate instead of validates}
+      \end{definition}
+    \end{frame}
+    
+    \begin{frame}
+      \frametitle{Tunning up User model cd.}
+      \railsusermodelII
+    \end{frame}
+    
+    \begin{frame}
+      \frametitle{Tunning up User model cd.}
+      \railsusermodelIII
+    \end{frame}
+    
+    \begin{frame}
+      \frametitle{User Controller and Views}
+      What we have to change, to allow new user creation and existing ones
+      modifications ?
+      \begin{itemize}
+      \item User Controller
+        \railsusercontroller
+      \item User views - \_form.html.erb
+        \railsuserviewform
+      \end{itemize}
+      
     \end{frame}
 
 \section{Third Day: Loging in Application}
